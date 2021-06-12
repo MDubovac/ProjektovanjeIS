@@ -17,11 +17,13 @@ if(isset($_POST["log_btn"])){
     $stmt->bind_param("s", $log_user);
     $stmt->execute();
     $result = $stmt->get_result();
+
+  
     while($row = $result->fetch_assoc()){
         $hash = $row["user_password"];
-    }
-    
-    if(password_verify($log_pass, $hash)){
+    } 
+
+    if(password_verify($log_pass, $hash)) {
         // Clear the session
         $_SESSION["log_user"] = "";
 
@@ -32,9 +34,5 @@ if(isset($_POST["log_btn"])){
         header("Location: ./admin.php");
     } else {
         array_push($error_array, "User does not exist");
-    }
-
-echo $_SESSION["auth_user"];
-print_r($error_array);
-    
+    } 
 }

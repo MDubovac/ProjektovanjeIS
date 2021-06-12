@@ -14,6 +14,13 @@
         <div class="form-group my-4">
             <label for="log_pass">Password</label>
             <input type="password" id="log_pass" name="log_pass" class="form-control" required>
+            <p class="text-danger">
+                <?php 
+                    if (in_array("User does not exist", $error_array)) {
+                        echo "User does not exist";
+                    }
+                ?>
+            </p>
         </div>
         <div class="py-2">
             <p>This page is meant for admin users only, if you came here by acciedent, please close this page.</p>
