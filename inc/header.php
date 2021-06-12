@@ -1,5 +1,7 @@
 <?php 
+    session_start();
     include_once(dirname(dirname(__FILE__)) . "./config/config.php");
+    include_once(dirname(dirname(__FILE__)) . "./config/db.php");
 ?>
 <!doctype html>
 <html lang="en">
@@ -44,8 +46,15 @@
             <i class="fa fa-user"></i> User
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="<?php echo APP_URL . "views/auth/login.php" ?>">Login</a></li>
-            <li><a class="dropdown-item" href="<?php echo APP_URL . "views/auth/register.php" ?>">Register</a></li>
+            <?php  
+              if(isset($_SESSION["auth_user"])){
+                  echo '<li class="nav-item"><a class="dropdown-item" href="'. APP_URL . 'views/auth/admin.php">Admin Panel</a></li>';
+                  echo '<li class="nav-item"><a class="dropdown-item" href="' . APP_URL . 'views/auth/logout.php">Logout</a></li>';
+              } else {
+                  echo '<li class="nav-item"><a class="dropdown-item" href="'. APP_URL . 'views/auth/register.php">Register</a></li>';
+                  echo '<li class="nav-item"><a class="dropdown-item" href="' . APP_URL . 'views/auth/login.php">Login</a></li>';
+              }
+            ?>
         </ul>
         </li>
       </ul>

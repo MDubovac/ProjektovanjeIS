@@ -3,25 +3,45 @@
     include_once("./inc/header.php");
 ?>
 
-<div class="container">
-    <div class="main">
-        <div class="home">
-            <div class="px-4 py-5 jumbotron">
-                <h1 class="display-4">Welcome to Fitness Club Portal</h1>
-                <p class="lead">This is a portal made for members of our club.</p>
-                <hr class="my-4">
-                <p>You can also use this portal to see all of our training plans, and sign up to them.</p>
-                <p class="lead">
-                    <a class="btn btn-primary btn-lg" href="<?php echo APP_URL . "views/plans.php" ?>" role="button">See all plans</a>
-                </p>
-            </div>
-        </div>
-
-        <h2><i class="fa fa-map-marker-alt"></i> Location</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d725.6979126665815!2d21.89552702923814!3d43.31862077441646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4755b0b16bb40e6f%3A0x260b304907f25fb0!2zTmlrb2xlIFBhxaFpxIdhIDI4LCBOacWhIDcwMDE4Mw!5e0!3m2!1sen!2srs!4v1623165332402!5m2!1sen!2srs" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../public/img/1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
     </div>
+    <div class="carousel-item">
+      <img src="../public/img/2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../public/img/3.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
+
 
 
 <?php 
